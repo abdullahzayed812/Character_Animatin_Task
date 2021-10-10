@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.body {
+  width: 100%;
+  height: 100vh;
+  background-color: #cddc39;
+  position: relative;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border: 1px solid #03a9f4;
+}
+.content h1 {
+  font-size: 500px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #795548;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  top: 124px;
+  left: 264px;
+  width: 40px;
+  height: 40px;
+  background-color: #03a9f4;;
+  animation-name: e-char-move;
+  animation-duration: 20s;
+  animation-delay: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  top: 422px;
+  left: 584px;
+  width: 40px;
+  height: 40px;
+  background-color: #03a9f4;;
+  animation-name: l-char-move;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes l-char-move {
+  5% {
+    top: 422px;
+    left: 398px;
+  }
+  10% {
+    top: 124px;
+    left: 398px;
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    top: 124px;
+    left: 398px;
+    opacity: 0;    
+  }
+}
+@keyframes e-char-move {
+  9.15% {
+    top: 124px;
+    left: 63px;
+  }
+  18.3%, 36.6% {
+    top: 263px;
+    left: 63px;
+  }
+  27.45% {
+    top: 263px;
+    left: 248px;
+  }
+  45.75%, 64.05% {
+    top: 422px;
+    left: 63px;
+  }  
+  54.9% {
+    top: 422px;
+    left: 264px;
+  }
+  73.2% {
+    top: 124px;
+    left: 63px;
+  }
+  82.35% {
+    top: 124px;
+    left: 264px;
+  }
+  100% {
+    top: 124px;
+    left: 264px;
+  }
+}
